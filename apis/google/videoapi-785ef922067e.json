@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "videoapi-linkbazaar",
+  "private_key_id": "785ef922067eff340f7907a439423f47635e0369",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCO0kX5QEBVDzpZ\nGaxnFHeQlQRYqoC1sWIolZ4FcxgvuTDLAQ1L7gSZz2V3g3KZwM6h6Y5lYkPrUiJC\n/KyO06Nl1wwyLn08F4q8kskdypjdXaU/kj0By7I40XlEH3KqQkBCM1re3FYkFKIN\nMwAZJfZ+glB8i3VYP7mjqjSENtTxqSdhhYtl9XtWr8SVC2S/nrf/ZoUxn/t527Bf\n73s4555U+mPkso96DkhvyL7zuxzMxSItOPHx1b6xdVaV6OtBDlbARdsxLtpOzXVf\nWdzuU+GusUJbTdQrcg8iFRPaAlwOgRqalpUC073h7QWV+3zgduBdBT90bjmcAanC\nGzE+sWbtAgMBAAECggEAbRG2MGhZ+Nt9QsgxejMOMFMtE416Z8dEYBwKprzDrsZt\ntcpi3iaySsgxA/lVjofJBat4fIJzvgVmduPB3/1OHpsBDF2mdDrCT8qFXoP3A67d\nYNQMVQ+7VlrakiS2C8I2kpfngKSiAEHlk9Dr9UihmvFoCAT0o2VfHtb/7ix1qOrL\nAnz5urrjvb5yM5/6JrZPHaPAJpDe8eW25YwDbnWqnwYNxBuFgOBH8xluL7T7W/mj\nP6Difu7GTqc0LebRwuA3sFQ1XdPs3UACN7Y1HE51E1M6oPfB03qAX3UkwiN58TWc\n1q51WnklOToV7QGJw4c8mCPxhOomlI8kpA/ki29hXQKBgQDu2Jkynj67uy6tGmBo\nZyb/W/tUKU29Upbj9V4EiMjs1zToGqxNbkztzdlO8NoXoDYOVkzsKYRmRl2MO65+\np2Z2kMRgoLblAbrnV7aPV/6OTiuELozFzKEMM6LBar0C8gLbL6D0VXkB/Z4di3dD\nL0prcjb99Fsiyj0s7ydbXBvQHwKBgQCZFCx451y7hb6Apedroko4HUTE0XaBZB5N\n3XOH5HIaXt5K1TGw+5u+koWbZAg92SykvuqpTz/uyAuD7HSak0W5+Uwz3rIaEmI+\ncSsLpwVGMRRReafur9tMZz/sRYVrAp+zEj+tWOs1VHfUpQMnqqGvvNWkxc8Slz5G\nQE2Vxvv3cwKBgDd43NPRxvYo+iVADAYTdw412cBpO2HuLZdSJHzfG/NN5D7H+x6c\nsIdGmOLps21rS0K3LnRnDBYI368zKUrHLFf7NXDPwsqbRUJ3r7HJGRkJ9LdlbFKA\nPSMtVu6fELj/ZkRr4nD87PbWZYOtIYzcDee4hicjOotw9xZZkQV59ge3AoGAJIUG\nkxWHLwmaSDDMRAZktHxvEpFyNy4+eI8TZ+EdQ6NMXwf7oeB06IMmMssrmC2+k9Mk\nQp4wf3PkI2X+732hDdwmzN0dGlE2dPUkstP20ycUVNe0M6JqrBCZ1HFFgiEPHnaF\nEIL9IizzpZx0Yzs29akUQwoZ+7JvXe0rVUcyh3cCgYEArWWIqCydJ/h3510A7gRx\nNwmub7+HVC88r4xhhIld+xRxW7lpU0M531KtvKl33lL8k/qgSp47KHN9598ugcqg\n1H9qda8kAYUQT2OcoelK7oAQd4n49XmKRuE4LcmpiERuuZTn1gUBbTG2SE76OY/E\nAxLXLXAiYqn1eyr5gRBs5tc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "videoapi-linkbazaar@appspot.gserviceaccount.com",
+  "client_id": "105602212048296403493",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/videoapi-linkbazaar%40appspot.gserviceaccount.com"
+}
