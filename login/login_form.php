@@ -15,7 +15,7 @@
  ?>
 <html>
 <head>
-	<title>LinkBazaar | Log in</title>
+	<title>VideoApi | Log in</title>
 	<link href='/css/bootstrap.min.css' rel='stylesheet'>
 	<script src='/js/bootstrap.min.js'></script>
 	<link rel="icon" type="image/png" href="/images/logo.png" />

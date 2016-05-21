@@ -20,7 +20,7 @@
 		<meta http-equiv="pragma" content="no-cache" />
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>LinkBazaar | Sign UP</title>
+		<title>VideoApi | Sign UP</title>
 		<link rel="icon" type="image/png" href="/images/logo.png" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -61,17 +61,17 @@
 				<div class='navbar-header'>
 					<a class='navbar-brand' href='/'><img src='/images/logo.png'/></a>
 				</div>
-				<div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+				<!-- <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
 					<ul class='nav navbar-nav navbar-right'>
 						<li><a href='/login/signup.php'>Sign Up</a></li>
 					</ul>
-				</div>
+				</div> -->
 			</div>
 		</nav>
 		<center>
 				<div class="container" style="max-width:300px;position: absolute; left: 50%;">
 					<div style="position: relative; left: -50%;">
-						<form class="form-signin" onsubmit="return validateMyForm();" action='register.php' method=post>
+						<form class="form-signin" onsubmit="return validateMyForm();" action='/login/register.php' method=post>
 							<h2 class="form-signin-heading" style="color:grey">Signup</h2><br> 
 							<!--
 							<input id="inputSex" class="" type="radio" required name="sex" value="M">Male

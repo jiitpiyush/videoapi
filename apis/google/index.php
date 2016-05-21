@@ -26,8 +26,7 @@ $client->addScope('https://www.googleapis.com/auth/youtube.upload');
 
 if($_SERVER['REMOTE_ADDR'] == $server_ip){
   	$client->setAccessToken($token);
-  	$youtube = new Google_Service_YouTube($client);
-
+  	
   	if($client->isAccessTokenExpired()) {
 	    $client->refreshToken($refreshToken);
         $newtoken=$client->getAccessToken();
@@ -36,9 +35,10 @@ if($_SERVER['REMOTE_ADDR'] == $server_ip){
 		$expiry = $response->expires_in;
 		$refresh_token = $response->refresh_token;
 		$time = date('Y-m-d H:i:s');
-        set_gtoken($uid, $newtoken, $expiry, $refreshToken, $time);
+        set_gtoken($uid, $newtoken, $expiry, $refresh_token, $time);
         $client->setAccessToken($newtoken);
 	}
+	$youtube = new Google_Service_YouTube($client);
 
   	// Check to ensure that the access token was successfully acquired.
 	if ($client->getAccessToken()) {

@@ -1,4 +1,10 @@
+
 <?php include "r_logout.php"; ?>
+<?php 
+    ob_clean();
+    ob_start();
+    session_start();
+?>
 <?php $base = $_SERVER['DOCUMENT_ROOT']; ?>
 <?php 
         $username   = $_POST['username'];
@@ -6,7 +12,6 @@
         $email      = $_POST['email'];
         $fname      = $_POST['fname'];
         $lname      = $_POST['lname'];
-        session_start();
 ?>
 
 
@@ -39,13 +44,13 @@
         $password_digest = password_hash(strval($password), PASSWORD_BCRYPT, $options);
 
         $stmt = $conn->prepare("INSERT INTO api_login (api_ufname, api_ulname, api_user, api_upass, pass_real, api_umail , u_salt) VALUES ( :fname, :lname, :user , :pass , :pass_real, :email , :salt)");
-        $stmt->bindParam( ':user' , $username, PDO::PARAM_STR,5 );
-        $stmt->bindParam( ':pass' , $password_digest, PDO::PARAM_STR,5 );
-        $stmt->bindParam( ':pass_real' , $password, PDO::PARAM_STR,5 );
-        $stmt->bindParam( ':email', $email, PDO::PARAM_STR,5    );
-        $stmt->bindParam( ':salt' , $salt, PDO::PARAM_STR,5 );
-        $stmt->bindParam( ':fname' , $fname, PDO::PARAM_STR,5   );
-        $stmt->bindParam( ':lname' , $lname, PDO::PARAM_STR,5   );
+        $stmt->bindParam( ':user' , $username, PDO::PARAM_STR,5);
+        $stmt->bindParam( ':pass' , $password_digest, PDO::PARAM_STR,5);
+        $stmt->bindParam( ':pass_real' , $password, PDO::PARAM_STR,5);
+        $stmt->bindParam( ':email', $email, PDO::PARAM_STR,5);
+        $stmt->bindParam( ':salt' , $salt, PDO::PARAM_STR,5);
+        $stmt->bindParam( ':fname' , $fname, PDO::PARAM_STR,5);
+        $stmt->bindParam( ':lname' , $lname, PDO::PARAM_STR,5);
         
         try{
             $stmt->execute();
@@ -55,8 +60,7 @@
             setcookie("user","");
             setcookie("email","");
             setcookie("xlazx","");
-            session_start();
-            $_SESSION['Username'] = $username;
+            $_SESSION['uid'] = $conn->lastInsertId();
             $_SESSION['LoggedIn'] = 1;
             echo "success!";
             header('Location: /');

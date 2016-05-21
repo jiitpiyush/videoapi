@@ -20,7 +20,7 @@
 		<meta http-equiv='expires' content='Tue, 01 Jan 1980 1:00:00 GMT' />
 		<meta http-equiv='pragma' content='no-cache' />
 		<meta name='description' content=''>
-		<title>LinkBazaar | Forgot Password</title>
+		<title>Videoapi | Forgot Password</title>
 		<link href='/css/bootstrap.min.css' rel='stylesheet'>
 		<style type='text/css'>
 		body{padding: 70px;}

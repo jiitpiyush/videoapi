@@ -4,14 +4,11 @@
 		$base = $_SERVER['DOCUMENT_ROOT'];
 		include "$base/connect/nect.php";
 		include "$base/constants.php";
-		$uid = $_SESSION['uid'];
 
 		$query = "SELECT uid FROM $yt_token_table WHERE uid = ?";
 		$stmt = $conn->prepare($query);
 		if($stmt->execute(array($uid))){
 			if($stmt->rowCount() > 0){
-
-			echo "piyush";
 				return 1;
 			}
 			else{

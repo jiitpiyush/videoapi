@@ -35,25 +35,23 @@
 		if($stmt->execute(array($vid,$uid))){
 			if($stmt->rowCount() > 0){
 				$row = $stmt->fetch(PDO::FETCH_ASSOC);
-				if($row['fb_video_id'] == 0){
+				if($row['fb_video_id'] == "0"){
 					$data[$i] = "fb";
 					$i++;
 				}
-				if($row['yt_video_id'] == 0){
+				if($row['yt_video_id'] == "0"){
 					$data[$i] = "yt";
 					$i++;
 				}
-
 				return $data;
 			}
 			else{
-				return array();
+				return;
 			}
 		}
 		else{
-			return array();
+			return;
 		}
-
 	}
 
 	function get_fb_id($uid){
@@ -111,7 +109,7 @@
 		if($site=="fb"){
 			$table = $fb_token_table;
 		}
-		elseif($site == 'yt'){
+		elseif($site == "yt"){
 			$table = $yt_token_table;
 		}
 
@@ -123,7 +121,23 @@
 			return $row;
 		}
 		else{
-			return array();
+			return ;
+		}
+	}
+
+	function set_status($uid,$vid){
+		$base = $_SERVER['DOCUMENT_ROOT'];
+		include "$base/connect/nect.php";
+		include "$base/constants.php";
+
+		$data = get_upload_details($uid,$vid);
+		if(empty($data)){
+			$q = "DELETE FROM $cron_table WHERE uid= ? AND video_id = ?";
+			$stmt = $conn->prepare($q);
+			if($stmt->execute(array($uid,$vid))){
+				return 1;
+			}
+
 		}
 	}
 ?>

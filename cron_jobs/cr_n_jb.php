@@ -11,15 +11,18 @@
 			if($stmt->rowCount() > 0){
 				$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 				foreach ($result as $row) {
+					$t = '';
+					$data = array();
+					$v_data = array();
+					$upload_data = array();
+
 					$uid = $row['uid'];
 					$vid = $row['video_id'];
 					$status = $row['status'];
-					$v_data = array();
 					if($status == 0){
 						$v_data = get_video_details($vid);
 						$upload_data = get_upload_details($uid,$vid);
-						$data = array();
-						foreach ($upload_data as $site) {
+						foreach($upload_data as $site) {
 							$t = get_token($uid,$site);
 							if($site == 'fb'){
 								$url = "http://videoapi.edubrandmedia.com/apis/facebook/index.php";
@@ -28,7 +31,7 @@
 								$vid = postVideo($uid, $url, $v_data, $token,'',$fb_id);
 								$data['fb'] = $vid;
 							}
-							else if($site=='yt'){
+							if($site=='yt'){
 								$url = "http://videoapi.edubrandmedia.com/apis/google/index.php";
 								$token = $t['access_token'];
 								$refreshToken = $t['refresh_token'];
@@ -46,9 +49,9 @@
 						}
 
 
-						// set_status($uid,$vid);
+						set_status($uid,$vid);
 
-						$mail_data = "Your video have been uploaded";
+						$mail_data = "Your video have been uploaded to: ";
 						if(!empty($data['fb'])){
 							$mail_data .= "\r\n <a href=".$fb_video.">Facebook</a>";
 						}
@@ -68,9 +71,6 @@
 					}
 				}
 			}
-		}
-		else{
-			echo "string";
 		}
 	}
 ?>
